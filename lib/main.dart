@@ -1,10 +1,15 @@
 import 'package:dating_videocall/provider/top_provider.dart';
+import 'package:dating_videocall/view/Your_screen.dart';
+import 'package:dating_videocall/view/bottom_screen.dart';
 import 'package:dating_videocall/view/contrary%20_screen.dart';
 import 'package:dating_videocall/view/detail_screen.dart';
 import 'package:dating_videocall/view/first_screen.dart';
 import 'package:dating_videocall/view/imagesider_screen.dart';
 import 'package:dating_videocall/view/intor_screen.dart';
+import 'package:dating_videocall/view/lifestyle_screen.dart';
+import 'package:dating_videocall/view/permission_screen.dart';
 import 'package:dating_videocall/view/splash_screen.dart';
+import 'package:dating_videocall/view/start_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
@@ -21,7 +26,7 @@ void main()async{
         builder: (context, orientation, deviceType){
           return    GetMaterialApp(
             debugShowCheckedModeBanner: false,
-            initialRoute: 'contrary',
+            initialRoute: 'start',
             routes: {
               '/':(context)=>Splash_Screen(),
               'open':(context)=>Open_Time_Screen(),
@@ -29,6 +34,11 @@ void main()async{
               'intor':(context)=>Intor_Screen(),
               'detail':(context)=>Detail_Screen(),
               'contrary':(context)=>contrary_Screen(),
+              'your':(context)=>Your_Screen(),
+              'life':(context)=>Lifestyle_Screen(),
+              'permisssion':(context)=>Permission_screen(),
+              'start':(context)=>Start_Screen(),
+              'bottom':(context)=>Bottom_Screen(),
             },
           );
         },

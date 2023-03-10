@@ -76,31 +76,10 @@ class _contrary_ScreenState extends State<contrary_Screen> {
                 child: InkWell(
                   onTap: (){
                     if(valide==true){
-                      Navigator.pushReplacementNamed(context,'');
+                      Navigator.pushReplacementNamed(context,'your');
                     }
                     else{
                       Get.snackbar("Red Alert", "Please fill all boxes.",colorText: Colors.red,snackPosition: SnackPosition.BOTTOM);
-                      // showDialog(
-                      //   context: context,
-                      //   builder: (BuildContext context){
-                      //     return AlertDialog(
-                      //       title: Text('',style: TextStyle(color: Colors.red),),
-                      //       content: Text(''),
-                      //       actions: [
-                      //         InkWell(onTap:(){
-                      //           Navigator.pop(context);
-                      //         },
-                      //           child: Padding(
-                      //             padding: EdgeInsets.all(8.0),
-                      //             child: Container(
-                      //               child: Text("ok",style: TextStyle(fontSize: 20),),
-                      //             ),
-                      //           ),
-                      //         ),
-                      //       ],
-                      //     );
-                      //   },
-                      // );
                     }
                   },
                   child: GlassmorphicContainer(

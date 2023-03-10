@@ -21,7 +21,6 @@ class Top_Provider extends ChangeNotifier{
   late String txtImage = "";
   String txtCountry= "";
   String txtGender = "";
-
   String countryValue = "";
   String stateValue = "";
   String cityValue= "";
@@ -29,23 +28,8 @@ class Top_Provider extends ChangeNotifier{
 
   int i=0;
 
-  void add(){
-    if(i<2)
-    {
-      i++;
-    }
-    notifyListeners();
-  }
-
-  void decrement(){
-    if(i>0){
-      i--;
-    }
-    notifyListeners();
-  }
-
-  void stepClick(int i){
-    this.i=i;
+  void changeicon(int index){
+    i = index;
     notifyListeners();
   }
 }
