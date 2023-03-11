@@ -79,7 +79,7 @@ class _contrary_ScreenState extends State<contrary_Screen> {
                       Navigator.pushReplacementNamed(context,'your');
                     }
                     else{
-                      Get.snackbar("Red Alert", "Please fill all boxes.",colorText: Colors.red,snackPosition: SnackPosition.BOTTOM);
+                      Get.snackbar("Red Alert", "Please fill all boxes.",colorText: Colors.red,snackPosition: SnackPosition.BOTTOM,margin:EdgeInsets.only(bottom: 8.h));
                     }
                   },
                   child: GlassmorphicContainer(

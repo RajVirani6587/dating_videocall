@@ -1,8 +1,10 @@
 import 'package:dating_videocall/provider/top_provider.dart';
 import 'package:dating_videocall/view/contrary%20_screen.dart';
+import 'package:dating_videocall/view/video_screen/video_screen.dart';
 import 'package:dot_navigation_bar/dot_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:sizer/sizer.dart';
 
 class Bottom_Screen extends StatefulWidget {
   const Bottom_Screen({Key? key}) : super(key: key);
@@ -12,7 +14,7 @@ class Bottom_Screen extends StatefulWidget {
 }
 
 class _Bottom_ScreenState extends State<Bottom_Screen> {
-  List WidgetsList=[contrary_Screen(),contrary_Screen(),contrary_Screen(),contrary_Screen(),];
+  List WidgetsList=[Video_Screen(),contrary_Screen(),contrary_Screen(),contrary_Screen(),];
   @override
   void initState() {
     super.initState();
@@ -26,27 +28,27 @@ class _Bottom_ScreenState extends State<Bottom_Screen> {
       body:WidgetsList[Provider.of<Top_Provider>(context,listen: true).i] ,
         extendBody: true,
       bottomNavigationBar:  DotNavigationBar(
+        unselectedItemColor: Colors.white,
+        backgroundColor:Colors.pink,
         currentIndex:Provider.of<Top_Provider>(context,listen:true).i,
           onTap: (value){
             Provider.of<Top_Provider>(context,listen:false).changeicon(value);
           },
-        dotIndicatorColor: Colors.black,
+        dotIndicatorColor: Colors.white,
+        selectedItemColor: Colors.purple,
+
         items: [
           DotNavigationBarItem(
-            icon: Icon(Icons.home),
-            selectedColor: Colors.purple,
+            icon: Icon(Icons.home,size: 20.sp,),
           ),
           DotNavigationBarItem(
-            icon: Icon(Icons.favorite_border),
-            selectedColor: Colors.pink,
+            icon: Icon(Icons.favorite_border,size: 20.sp,),
           ),
           DotNavigationBarItem(
-            icon: Icon(Icons.search),
-            selectedColor: Colors.orange,
+            icon: Icon(Icons.search,size: 20.sp,),
           ),
           DotNavigationBarItem(
-            icon: Icon(Icons.person),
-            selectedColor: Colors.teal,
+            icon: Icon(Icons.person,size: 20.sp,),
           ),
         ],
       ),

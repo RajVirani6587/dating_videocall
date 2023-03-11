@@ -10,13 +10,17 @@ import 'package:dating_videocall/view/lifestyle_screen.dart';
 import 'package:dating_videocall/view/permission_screen.dart';
 import 'package:dating_videocall/view/splash_screen.dart';
 import 'package:dating_videocall/view/start_screen.dart';
+import 'package:dating_videocall/view/store/Store_screen.dart';
+import 'package:dating_videocall/view/video_screen/video_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 
+
 void main()async{
   WidgetsFlutterBinding.ensureInitialized();
+
   runApp(
     MultiProvider(
       providers: [
@@ -26,7 +30,7 @@ void main()async{
         builder: (context, orientation, deviceType){
           return    GetMaterialApp(
             debugShowCheckedModeBanner: false,
-            initialRoute: 'start',
+            initialRoute: 'home',
             routes: {
               '/':(context)=>Splash_Screen(),
               'open':(context)=>Open_Time_Screen(),
@@ -39,6 +43,8 @@ void main()async{
               'permisssion':(context)=>Permission_screen(),
               'start':(context)=>Start_Screen(),
               'bottom':(context)=>Bottom_Screen(),
+              'video':(context)=>Video_Screen(),
+              'home':(context)=>Home(),
             },
           );
         },
