@@ -1,5 +1,6 @@
 import 'package:dating_videocall/provider/top_provider.dart';
 import 'package:dating_videocall/view/contrary%20_screen.dart';
+import 'package:dating_videocall/view/store/viewstory_screen.dart';
 import 'package:dating_videocall/view/video_screen/video_screen.dart';
 import 'package:dot_navigation_bar/dot_navigation_bar.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +15,7 @@ class Bottom_Screen extends StatefulWidget {
 }
 
 class _Bottom_ScreenState extends State<Bottom_Screen> {
-  List WidgetsList=[Video_Screen(),contrary_Screen(),contrary_Screen(),contrary_Screen(),];
+  List WidgetsList=[Video_Screen(),ViewSyory_Screen(),contrary_Screen(),contrary_Screen(),];
   @override
   void initState() {
     super.initState();
@@ -36,7 +37,6 @@ class _Bottom_ScreenState extends State<Bottom_Screen> {
           },
         dotIndicatorColor: Colors.white,
         selectedItemColor: Colors.purple,
-
         items: [
           DotNavigationBarItem(
             icon: Icon(Icons.home,size: 20.sp,),

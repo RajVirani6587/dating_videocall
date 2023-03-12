@@ -11,6 +11,7 @@ import 'package:dating_videocall/view/permission_screen.dart';
 import 'package:dating_videocall/view/splash_screen.dart';
 import 'package:dating_videocall/view/start_screen.dart';
 import 'package:dating_videocall/view/store/Store_screen.dart';
+import 'package:dating_videocall/view/store/viewstory_screen.dart';
 import 'package:dating_videocall/view/video_screen/video_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -30,7 +31,7 @@ void main()async{
         builder: (context, orientation, deviceType){
           return    GetMaterialApp(
             debugShowCheckedModeBanner: false,
-            initialRoute: 'home',
+            initialRoute: 'bottom',
             routes: {
               '/':(context)=>Splash_Screen(),
               'open':(context)=>Open_Time_Screen(),
@@ -44,7 +45,8 @@ void main()async{
               'start':(context)=>Start_Screen(),
               'bottom':(context)=>Bottom_Screen(),
               'video':(context)=>Video_Screen(),
-              'home':(context)=>Home(),
+              'home':(context)=>StoryPage(),
+              'view':(context)=>ViewSyory_Screen(),
             },
           );
         },

@@ -1,180 +1,136 @@
+import 'package:dating_videocall/provider/top_provider.dart';
 import 'package:flutter/material.dart';
-import 'package:story_view/story_view.dart';
+import 'package:provider/provider.dart';
+import 'package:sizer/sizer.dart';
+import 'package:story_time/story_time.dart';
 
-class Home extends StatelessWidget {
-  final StoryController controller = StoryController();
+
+
+
+class StoryPage extends StatefulWidget {
+  const StoryPage({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Delicious Ghanaian Meals"),
-      ),
-      body: Container(
-        margin: EdgeInsets.all(8),
-        child: ListView(
-          children: <Widget>[
-            Container(
-              height: 300,
-              child: StoryView(
-                controller: controller,
-                storyItems: [
-                  StoryItem.text(
-                    title: "Hello world!\nHave a look at some great Ghanaian delicacies. I'm sorry if your mouth waters. \n\nTap!",
-                    backgroundColor: Colors.orange,
-                    roundedTop: true,
-                  ),
-                  StoryItem.inlineImage(
-                    url: "https://image.ibb.co/gCZFbx/Banku-and-tilapia.jpg",
-                    controller: controller,
-                    caption: Text(
-                      "Banku & Tilapia. The food to keep you charged whole day.\n#1 Local food.",
-                      style: TextStyle(
-                        color: Colors.white,
-                        backgroundColor: Colors.black54,
-                        fontSize: 17,
-                      ),
-                    ),
-                  ),
-                  StoryItem.inlineImage(
-                    url:
-                    "https://image.ibb.co/cU4WGx/Omotuo-Groundnut-Soup-braperucci-com-1.jpg",
-                    controller: controller,
-                    caption: Text(
-                      "Omotuo & Nkatekwan; You will love this meal if taken as supper.",
-                      style: TextStyle(
-                        color: Colors.white,
-                        backgroundColor: Colors.black54,
-                        fontSize: 17,
-                      ),
-                    ),
-                  ),
-                  StoryItem.inlineImage(
-                    url:
-                    "https://media.giphy.com/media/5GoVLqeAOo6PK/giphy.gif",
-                    controller: controller,
-                    caption: Text(
-                      "Hektas, sektas and skatad",
-                      style: TextStyle(
-                        color: Colors.white,
-                        backgroundColor: Colors.black54,
-                        fontSize: 17,
-                      ),
-                    ),
-                  )
-                ],
-                onStoryShow: (s) {
-                  print("Showing a story");
-                },
-                onComplete: () {
-                  print("Completed a cycle");
-                },
-                progressPosition: ProgressPosition.bottom,
-                repeat: true,
-                inline: true,
-              ),
-            ),
-            Material(
-              child: InkWell(
-                onTap: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => MoreStories()));
-                },
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.black54,
-                      borderRadius:
-                      BorderRadius.vertical(bottom: Radius.circular(8))),
-                  padding: EdgeInsets.symmetric(vertical: 8),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Icon(
-                        Icons.arrow_forward,
-                        color: Colors.white,
-                      ),
-                      SizedBox(
-                        width: 16,
-                      ),
-                      Text(
-                        "View more stories",
-                        style: TextStyle(fontSize: 16, color: Colors.white),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
+  StoryPageState createState() => StoryPageState();
+}
+
+class StoryPageState extends State<StoryPage> {
+  late ValueNotifier<IndicatorAnimationCommand> indicatorAnimationController;
+
+  Top_Provider? home_providert;
+  Top_Provider? home_providerf;
+
+  @override
+  void initState() {
+    super.initState();
+    indicatorAnimationController = ValueNotifier<IndicatorAnimationCommand>(
+      IndicatorAnimationCommand(resume: true),
     );
   }
-}
-
-class MoreStories extends StatefulWidget {
-  @override
-  _MoreStoriesState createState() => _MoreStoriesState();
-}
-
-class _MoreStoriesState extends State<MoreStories> {
-  final storyController = StoryController();
 
   @override
   void dispose() {
-    storyController.dispose();
+    indicatorAnimationController.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
+    home_providerf  = Provider.of<Top_Provider>(context,listen: false);
+    home_providert  = Provider.of<Top_Provider>(context,listen: true);
     return Scaffold(
-
-      body: StoryView(
-        storyItems: [
-          StoryItem.text(
-            title: "I guess you'd love to see more of our food. That's great.",
-            backgroundColor: Colors.blue,
-          ),
-          StoryItem.text(
-            title: "Nice!\n\nTap to continue.",
-            backgroundColor: Colors.red,
-            textStyle: TextStyle(
-              fontFamily: 'Dancing',
-              fontSize: 40,
-            ),
-          ),
-          StoryItem.pageImage(
-
-            url: "https://media.istockphoto.com/id/1322277517/photo/wild-grass-in-the-mountains-at-sunset.jpg?s=612x612&w=0&k=20&c=6mItwwFFGqKNKEAzv0mv6TaxhLN3zSE43bWmFN--J5w=",
-            caption: "Still sampling",
-            controller: storyController,
-          ),
-          StoryItem.pageImage(
-              url: "https://media.giphy.com/media/5GoVLqeAOo6PK/giphy.gif",
-              caption: "Working with gifs",
-              controller: storyController),
-          StoryItem.pageImage(
-
-            url: "https://media.giphy.com/media/XcA8krYsrEAYXKf4UQ/giphy.gif",
-            caption: "Hello, from the other side",
-            controller: storyController,
-          ),
-          StoryItem.pageImage(
-            url: "https://media.giphy.com/media/XcA8krYsrEAYXKf4UQ/giphy.gif",
-            caption: "Hello, from the other side2",
-            controller: storyController,
-          ),
-        ],
-        onStoryShow: (s) {
-          print("Showing a story");
+      body: StoryPageView(
+        onStoryIndexChanged: (int newStoryIndex) {
+          if (newStoryIndex == 0) {
+            indicatorAnimationController.value = IndicatorAnimationCommand(
+              duration: const Duration(seconds: 10),
+            );
+          }
+          else {
+            indicatorAnimationController.value = IndicatorAnimationCommand(
+              duration: const Duration(seconds: 5),
+            );
+          }
         },
-        onComplete: () {
-          print("Completed a cycle");
+        itemBuilder: (context, pageIndex, storyIndex) {
+          final user =home_providerf!.sampleUsers[pageIndex];
+          final story = user.stories![storyIndex];
+          return Stack(
+            children: [
+              Positioned.fill(
+                child: Container(color: Colors.black),
+              ),
+              Positioned.fill(
+                child: Image.network(
+                  story.imageUrl!,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Padding(
+                padding:  EdgeInsets.only(top: 5.4.h, left: 3.w),
+                child: Row(
+                  children: [
+                    Container(
+                      height: 32,
+                      width: 32,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(user.imageasset!),
+                          fit: BoxFit.cover,
+                        ),
+                        shape: BoxShape.circle,
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 8,
+                    ),
+                    Text(
+                      user.userName!,
+                      style: const TextStyle(
+                        fontSize: 17,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          );
         },
-        progressPosition: ProgressPosition.top,
-        repeat: false,
-        controller: storyController,
+        gestureItemBuilder: (context, pageIndex, storyIndex) {
+          return Stack(
+            children: [
+              Align(
+                alignment: Alignment.topRight,
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 32),
+                  child: IconButton(
+                    color: Colors.white,
+                    icon: const Icon(Icons.close),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                  ),
+                ),
+              ),
+            ],
+          );
+        },
+        indicatorAnimationController: indicatorAnimationController,
+        initialStoryIndex: (pageIndex) {
+          if (pageIndex == 0) {
+            return 0;
+          }
+          return 0;
+        },
+        pageLength: home_providerf!.sampleUsers.length,
+        storyLength: (int pageIndex) {
+          return home_providerf!.sampleUsers[pageIndex].stories!.length;
+        },
+        onPageLimitReached: () {
+          Navigator.pop(context);
+        },
       ),
     );
   }
