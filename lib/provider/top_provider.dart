@@ -90,27 +90,147 @@ class Top_Provider extends ChangeNotifier{
   videocall?Datapickkk;
 
   List<UserModel> sampleUsers = [
-    UserModel(imageasset:'assets/image/1.jpg', stories:[StoryModel(imageUrl: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609418426663-8b5c127691f9?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609444074870-2860a9a613e3?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1Nnx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609504373567-acda19c93dc4?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1MHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),], userName: "Anastasia",),
-    UserModel(imageasset:'assets/image/2.jpg', stories:[StoryModel(imageUrl: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609504373567-acda19c93dc4?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1MHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),], userName: "Angelina",),
-    UserModel(imageasset:'assets/image/1.jpg', stories:[StoryModel(imageUrl: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609418426663-8b5c127691f9?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609444074870-2860a9a613e3?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1Nnx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609504373567-acda19c93dc4?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1MHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),], userName: "Anastasia",),
-    UserModel(imageasset:'assets/image/2.jpg', stories:[StoryModel(imageUrl: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609504373567-acda19c93dc4?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1MHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),], userName: "Angelina",),
-    UserModel(imageasset:'assets/image/1.jpg', stories:[StoryModel(imageUrl: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609418426663-8b5c127691f9?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609444074870-2860a9a613e3?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1Nnx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609504373567-acda19c93dc4?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1MHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),], userName: "Anastasia",),
-    UserModel(imageasset:'assets/image/2.jpg', stories:[StoryModel(imageUrl: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609504373567-acda19c93dc4?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1MHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),], userName: "Angelina",),
-    UserModel(imageasset:'assets/image/1.jpg', stories:[StoryModel(imageUrl: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609418426663-8b5c127691f9?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609444074870-2860a9a613e3?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1Nnx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609504373567-acda19c93dc4?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1MHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),], userName: "Anastasia",),
-    UserModel(imageasset:'assets/image/2.jpg', stories:[StoryModel(imageUrl: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609504373567-acda19c93dc4?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1MHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),], userName: "Angelina",),
-    UserModel(imageasset:'assets/image/1.jpg', stories:[StoryModel(imageUrl: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609418426663-8b5c127691f9?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609444074870-2860a9a613e3?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1Nnx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609504373567-acda19c93dc4?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1MHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),], userName: "Anastasia",),
-    UserModel(imageasset:'assets/image/2.jpg', stories:[StoryModel(imageUrl: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609504373567-acda19c93dc4?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1MHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),], userName: "Angelina",),
-    UserModel(imageasset:'assets/image/1.jpg', stories:[StoryModel(imageUrl: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609418426663-8b5c127691f9?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609444074870-2860a9a613e3?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1Nnx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609504373567-acda19c93dc4?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1MHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),], userName: "Anastasia",),
-    UserModel(imageasset:'assets/image/2.jpg', stories:[StoryModel(imageUrl: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609504373567-acda19c93dc4?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1MHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),], userName: "Angelina",),
-    UserModel(imageasset:'assets/image/1.jpg', stories:[StoryModel(imageUrl: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609418426663-8b5c127691f9?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609444074870-2860a9a613e3?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1Nnx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609504373567-acda19c93dc4?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1MHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),], userName: "Anastasia",),
-    UserModel(imageasset:'assets/image/2.jpg', stories:[StoryModel(imageUrl: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609504373567-acda19c93dc4?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1MHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),], userName: "Angelina",),
-    UserModel(imageasset:'assets/image/1.jpg', stories:[StoryModel(imageUrl: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609418426663-8b5c127691f9?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609444074870-2860a9a613e3?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1Nnx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609504373567-acda19c93dc4?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1MHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),], userName: "Anastasia",),
-    UserModel(imageasset:'assets/image/2.jpg', stories:[StoryModel(imageUrl: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609504373567-acda19c93dc4?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1MHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),], userName: "Angelina",),
-    UserModel(imageasset:'assets/image/1.jpg', stories:[StoryModel(imageUrl: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609418426663-8b5c127691f9?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609444074870-2860a9a613e3?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1Nnx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609504373567-acda19c93dc4?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1MHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),], userName: "Anastasia",),
-    UserModel(imageasset:'assets/image/2.jpg', stories:[StoryModel(imageUrl: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609504373567-acda19c93dc4?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1MHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),], userName: "Angelina",),
-    UserModel(imageasset:'assets/image/1.jpg', stories:[StoryModel(imageUrl: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609418426663-8b5c127691f9?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609444074870-2860a9a613e3?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1Nnx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609504373567-acda19c93dc4?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1MHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),], userName: "Anastasia",),
-    UserModel(imageasset:'assets/image/2.jpg', stories:[StoryModel(imageUrl: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"), StoryModel(imageUrl: "https://images.unsplash.com/photo-1609504373567-acda19c93dc4?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1MHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),], userName: "Angelina",),
+    UserModel(imageasset:'assets/image/21.jpg',
+      stories:[
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/40/d3/83/40d38356eb3e28c5f40f20cd6d63f316.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/91/a6/76/91a67607b553683195f931a6064e625f.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/a5/bf/75/a5bf75ee24dabbb1271e9d8208f223ea.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/5b/26/5b/5b265b7087425bf8b794b479d0ebc672.jpg"),
+      ],
+      userName: "Anastasia",),
+
+    UserModel(imageasset:'assets/image/22.jpg',
+      stories:[
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/06/f1/9c/06f19c63898a6b9ffdf45c3759f00703.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/be/16/c6/be16c65f640350e2a22f3293e93d10a9.jpg"),],
+      userName: "Angelina",),
+
+    UserModel(imageasset:'assets/image/23.jpg',
+      stories:[
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/23/ad/50/23ad50be0558a32dc84312f3483820e0.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/e8/c4/2a/e8c42a1fe329f8ca887a45ab6c59bfc2.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/736x/8b/02/83/8b0283d719e63d192d06dbb6980782bd.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/50/82/5d/50825d3f5367f7b05c7a82fc37a39b25.jpg"),],
+      userName: "Nadia",),
+
+    UserModel(imageasset:'assets/image/24.jpg',
+      stories:[
+        StoryModel(imageUrl: "https://i.pinimg.com/750x/4d/49/90/4d49907742df50cd0651856bddfaae7b.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/84/19/a2/8419a252f43e900865ddc9aa2cae3e04.jpg"),],
+      userName: "Mila",),
+    UserModel(imageasset:'assets/image/25.jpg',
+
+      stories:[
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/ce/69/fa/ce69fa163da546c10477be7787d42e8e.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/70/f0/0b/70f00b6837f7dba45be9cef3355bb683.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/95/a7/25/95a7252a45b9fa0847d98ca4d272a93e.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/59/51/fb/5951fb3e7b6ab95faa71672c255b1266.jpg"),],
+      userName: "Lara",),
+
+    UserModel(imageasset:'assets/image/26.jpg',
+      stories:[
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/81/44/e1/8144e1b2c2800205527f835fc41fa021.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/0c/88/52/0c88520ceecb78e05364e1bf34413a79.jpg"),],
+      userName: "Anya",),
+
+    UserModel(imageasset:'assets/image/27.jpg',
+      stories:[
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/2e/84/1d/2e841dddc38a8e0ae6fc8e67feb3fdcb.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/4b/43/f5/4b43f5516f5c6fd4ccd65708c1d0f5c5.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/736x/5c/bc/06/5cbc062faf6f61f272011d8b967e904d.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/ad/93/fc/ad93fc1c090c386510a242eb651549ee.jpg"),],
+      userName: "Khristina",),
+
+    UserModel(imageasset:'assets/image/28.jpg',
+      stories:[
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/26/a3/53/26a353b0c265a32bab6d85bab590c25e.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/736x/60/36/99/603699751e8b90615b365b4ad1d22c57.jpg"),],
+      userName: "Nadia",),
+
+    UserModel(imageasset:'assets/image/29.jpg',
+      stories:[
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/76/13/86/7613869de06576c2ae7818049868f327.jpg"),
+      ],
+      userName: "Bella",),
+
+    UserModel(imageasset:'assets/image/30.jpg',
+      stories:[
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/f4/47/cf/f447cf4cfa5e292caa3308fbaed2c71c.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/ae/e3/cf/aee3cf10cd70c998f8797ee839bb2540.jpg"),],
+      userName: "Dasha",),
+
+    UserModel(imageasset:'assets/image/31.jpg',
+      stories:[
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/34/f4/41/34f441bf736f438427de0429fae8c822.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/ca/ae/e0/caaee01ecd7a9da86840caad02fcec2c.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/84/c0/48/84c048d04344c84bc74e4b7e61809237.jpg"),
+       ],
+      userName: "Oksana",),
+
+    UserModel(imageasset:'assets/image/32.jpg',
+      stories:[
+        StoryModel(imageUrl: "https://i.pinimg.com/750x/40/2d/d5/402dd52b68ecdb2f55ef2da3a8eebb8e.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/aa/40/9f/aa409f929bc9e99cdb0f783b2867df60.jpg "),],
+      userName: "Polina",),
+
+    UserModel(imageasset:'assets/image/33.jpg',
+      stories:[
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/d7/c2/3c/d7c23ce5d51a4114c8f1a47a30778997.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/6c/56/50/6c56503197de24fd43b543020b97a7c0.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/fd/d7/f6/fdd7f6b2a2f7e2f108416c186012a0a3.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/33/08/8d/33088df3334d4677f100a1fc9d9559d4.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/aa/e2/3d/aae23dfb759177fa9ce9f40ed3780e09.jpg"),],
+      userName: "Rada",),
+
+    UserModel(imageasset:'assets/image/34.jpg',
+      stories:[
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/77/15/28/771528d497a0e07ced87b5bb700fcf89.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/474x/3e/6c/2e/3e6c2ec0c9bbe5a4b06c1862912bf0a6.jpg"),],
+      userName: "Regina",),
+
+    UserModel(imageasset:'assets/image/35.jpg',
+      stories:[
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/06/d8/39/06d839f2a818e923d40a88cbf5029ddd.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/bc/1c/bf/bc1cbf140268dc2c031172ab846d517c.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/4f/d1/75/4fd175eb0a64eaf4a8215d2cdc4d8e91.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/aa/c5/ef/aac5ef65b0e3ef30a1174cb1ef361bdf.jpg"),],
+      userName: "Tavisha",),
+
+    UserModel(imageasset:'assets/image/36.jpg',
+      stories:[
+        StoryModel(imageUrl: "https://i.pinimg.com/750x/cc/87/67/cc8767cfb269718e76056d8f9f8f83ef.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/ed/d9/e1/edd9e1db715f5b5301c8a8a2593fd99b.jpg"),],
+      userName: "Nika",),
+
+    UserModel(imageasset:'assets/image/37.jpg',
+      stories:[
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/c0/29/47/c02947c19e458ff59937c5208952a9cf.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/c2/f9/30/c2f930b59ad342b955d1380af37ba135.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/736x/c1/42/2d/c1422d0eeac72a6c425bc037ee6eee4c.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/22/a0/3d/22a03d3c54f977e06c679f3c04bdd4dc.jpg"),],
+      userName: "Nikita",),
+
+    UserModel(imageasset:'assets/image/38.jpg',
+      stories:[
+        StoryModel(imageUrl: "https://i.pinimg.com/750x/b6/5d/22/b65d226da0f232ec85950a70398462ed.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/3f/89/84/3f8984039cecfaef3d48ad3718dbb5b7.jpg"),],
+      userName: "Roza",),
+
+    UserModel(imageasset:'assets/image/39.jpg',
+      stories:[
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/a8/e4/d8/a8e4d8e02aad2305a9816d3e0e8989af.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/dc/28/ab/dc28abbdd9175b920d0f0c23f2b6511c.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/c0/0d/20/c00d202e90abc8bc342f345f4d21585b.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/750x/ce/5e/28/ce5e2848d3a6fcbcaf5af619a8c15681.jpg "),],
+      userName: "Radinka",),
+
+    UserModel(imageasset:'assets/image/40.jpg',
+      stories:[
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/f4/fa/fc/f4fafc2a773166bfb63cead187cbef75.jpg"),
+        StoryModel(imageUrl: "https://i.pinimg.com/564x/88/b6/6c/88b66c62a73c8df16a5cb49413bbf34d.jpg"),],
+      userName: "Vanka",),
  ];
   UserModel?pick;
+
 
 }

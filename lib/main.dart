@@ -4,6 +4,7 @@ import 'package:dating_videocall/view/bottom_screen.dart';
 import 'package:dating_videocall/view/contrary%20_screen.dart';
 import 'package:dating_videocall/view/detail_screen.dart';
 import 'package:dating_videocall/view/first_screen.dart';
+import 'package:dating_videocall/view/flicked/flicked_screen.dart';
 import 'package:dating_videocall/view/imagesider_screen.dart';
 import 'package:dating_videocall/view/intor_screen.dart';
 import 'package:dating_videocall/view/lifestyle_screen.dart';
@@ -47,6 +48,7 @@ void main()async{
               'video':(context)=>Video_Screen(),
               'home':(context)=>StoryPage(),
               'view':(context)=>ViewSyory_Screen(),
+              'flicked':(context)=>Flicked_Screen(),
             },
           );
         },
