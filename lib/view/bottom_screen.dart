@@ -4,6 +4,7 @@ import 'package:dating_videocall/view/flicked/flicked_screen.dart';
 import 'package:dating_videocall/view/store/viewstory_screen.dart';
 import 'package:dating_videocall/view/video_screen/video_screen.dart';
 import 'package:dot_navigation_bar/dot_navigation_bar.dart';
+import 'package:flicked_cards/flicked_cards.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
@@ -16,7 +17,10 @@ class Bottom_Screen extends StatefulWidget {
 }
 
 class _Bottom_ScreenState extends State<Bottom_Screen> {
-  List WidgetsList=[Video_Screen(),ViewSyory_Screen(),Flicked_Screen(),contrary_Screen(),];
+  List WidgetsList=[Video_Screen(),
+    ViewSyory_Screen(),
+    Flicked_Screen(cardAnimation: FlipAnimation(),),
+    contrary_Screen(),];
   @override
   void initState() {
     super.initState();

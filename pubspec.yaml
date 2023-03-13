@@ -53,6 +53,7 @@ dependencies:
   story_time: ^1.0.6
   like_button: ^2.0.5
   flicked_cards: ^0.0.3
+  google_fonts: ^2.1.0
 
 
 dev_dependencies:

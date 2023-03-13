@@ -89,6 +89,51 @@ class Top_Provider extends ChangeNotifier{
 
   videocall?Datapickkk;
 
+
+  List <Superhero> marvelHeroes = [
+    Superhero(
+        heroName: 'Spider Man',
+        name: 'Peter Parker',
+        pathImage: 'assets/image/spiderman-a.png',
+        rawColor: "0xffA41209"),
+    Superhero(
+        heroName: 'Iron Man',
+        name: 'Tony Stark',
+        pathImage: 'assets/image/ironman-a.png',
+        rawColor: "0xffB3790F"),
+    Superhero(
+        heroName: 'Thor',
+        name: 'Thor Odinson',
+        pathImage: 'assets/image/thor-c.png',
+        rawColor: "0xff3E4953"),
+    Superhero(
+        heroName: 'Ant Man',
+        name: 'Scott Lang',
+        pathImage: 'assets/image/antman-a.png',
+        rawColor: "0xff98142B"),
+    Superhero(
+        heroName: 'Black Widow',
+        name: 'Natasha Romanova',
+        pathImage: 'assets/image/blackwidow-a.png',
+        rawColor: "0xff011535"),
+    Superhero(
+        heroName: 'Captain America',
+        name: 'Steve Rogers',
+        pathImage: 'assets/image/captain-b.png',
+        rawColor: "0xff0232CB"),
+    Superhero(
+        heroName: 'Hawk eye',
+        name: 'Clint Barton',
+        pathImage: 'assets/image/hawkeye.png',
+        rawColor: "0xff380142"),
+    Superhero(
+        heroName: 'Hulk',
+        name: 'Bruce Banner',
+        pathImage: 'assets/image/hulk-b.png',
+        rawColor: "0xff047A3B"
+    ),
+  ];
+  
   List<UserModel> sampleUsers = [
     UserModel(imageasset:'assets/image/21.jpg',
       stories:[

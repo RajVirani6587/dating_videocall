@@ -22,3 +22,11 @@ class StoryModel {
   String ?imageUrl;
   StoryModel({this.imageUrl});
 }
+
+
+class Superhero {
+  final String name, heroName,pathImage,rawColor;
+   Superhero({required this.name, required this.heroName, required this.pathImage, required this.rawColor,
+  });
+}
+
