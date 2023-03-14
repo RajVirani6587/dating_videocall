@@ -1,6 +1,8 @@
 import 'package:dating_videocall/model/model3.dart';
 import 'package:dating_videocall/provider/top_provider.dart';
+import 'package:dating_videocall/view/video_screen/videocall_playScreen.dart';
 import 'package:flutter/material.dart';
+import 'package:page_route_animator/page_route_animator.dart';
 import 'package:parallax_rain/parallax_rain.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
@@ -57,7 +59,13 @@ class _Video_ScreenState extends State<Video_Screen> {
                       year: home_providerf!.l1[index].year,
                       video:home_providerf!.l1[index].video,
                     );
-                    Navigator.pushNamed(context,'vplay');
+                    Navigator.push(context,PageRouteAnimator(
+                      child: Videocallplay_Screen(),
+                      routeAnimation: RouteAnimation.leftToRight,
+                      curve: Curves.easeOut,
+                      duration:  Duration(milliseconds: 2500),
+                      reverseDuration:  Duration(milliseconds: 1500),
+                    ));
                   },
                   child: Column(
                     children: [

@@ -33,23 +33,21 @@ class Flicked_Screen extends StatelessWidget {
           Colors.blueGrey
         ],
       ),
-      Expanded(
-        child: FlickedCards(
-          count: home_providerf.marvelHeroes.length,
-          debug: false,
-          animationStyle:cardAnimation,// cardAnimation,
-          onSwiped: (idx, dir) => print(' $dir $idx'),
-          builder: (index, progress, context) {
-            final superHeroe = home_providerf.marvelHeroes[index];
-            return Container(
-              child: Center(
-                child: SuperheroCard(
-                    superhero: superHeroe,
-                    factorChange: 1 - progress),
-              ),
-            );
-          },
-        ),
+      FlickedCards(
+        count: home_providerf.marvelHeroes.length,
+        debug: false,
+        animationStyle:cardAnimation,// cardAnimation,
+        onSwiped: (idx, dir) => print(' $dir $idx'),
+        builder: (index, progress, context) {
+          final superHeroe = home_providerf.marvelHeroes[index];
+          return Container(
+            child: Center(
+              child: SuperheroCard(
+                  superhero: superHeroe,
+                  factorChange: 1 - progress),
+            ),
+          );
+        },
       ),
     ],
   ),

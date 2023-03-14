@@ -1,5 +1,7 @@
+import 'package:dating_videocall/view/start_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
+import 'package:page_route_animator/page_route_animator.dart';
 import 'package:parallax_rain/parallax_rain.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:sizer/sizer.dart';
@@ -86,7 +88,13 @@ class _Permission_screenState extends State<Permission_screen> {
               SizedBox(height: 2.h,),
               InkWell(
                 onTap: () async {
-                  Navigator.pushReplacementNamed(context,'start');
+                  Navigator.pushReplacement(context,PageRouteAnimator(
+                    child: Start_Screen(),
+                    routeAnimation: RouteAnimation.fade,
+                    curve: Curves.easeOut,
+                    duration:  Duration(milliseconds: 5000),
+                    reverseDuration:  Duration(milliseconds: 4000),
+                  ));
                   Map<Permission, PermissionStatus> map = await[Permission.microphone, Permission.camera , Permission.storage].request();
                   if (await Permission.camera.isDenied) {
                     print("Camera Deny");

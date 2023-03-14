@@ -25,8 +25,8 @@ class StoryModel {
 
 
 class Superhero {
-  final String name, heroName,pathImage,rawColor;
-   Superhero({required this.name, required this.heroName, required this.pathImage, required this.rawColor,
+  final String name, heroName,pathImage;
+   Superhero({required this.name, required this.heroName, required this.pathImage,
   });
 }
 

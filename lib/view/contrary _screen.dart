@@ -1,9 +1,11 @@
 
 import 'package:country_state_city_picker/country_state_city_picker.dart';
 import 'package:dating_videocall/provider/top_provider.dart';
+import 'package:dating_videocall/view/Your_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:glassmorphism/glassmorphism.dart';
+import 'package:page_route_animator/page_route_animator.dart';
 import 'package:parallax_rain/parallax_rain.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
@@ -76,7 +78,13 @@ class _contrary_ScreenState extends State<contrary_Screen> {
                 child: InkWell(
                   onTap: (){
                     if(valide==true){
-                      Navigator.pushReplacementNamed(context,'your');
+                      Navigator.pushReplacement(context,PageRouteAnimator(
+                        child: Your_Screen(),
+                        routeAnimation: RouteAnimation.bottomLeftToTopRightWithScale,
+                        curve: Curves.easeOut,
+                        duration:  Duration(milliseconds: 5000),
+                        reverseDuration:  Duration(milliseconds: 4000),
+                      ));
                     }
                     else{
                       Get.snackbar("Red Alert", "Please fill all boxes.",colorText: Colors.red,snackPosition: SnackPosition.BOTTOM,margin:EdgeInsets.only(bottom: 8.h));

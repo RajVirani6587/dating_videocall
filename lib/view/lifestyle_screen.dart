@@ -1,5 +1,7 @@
+import 'package:dating_videocall/view/permission_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
+import 'package:page_route_animator/page_route_animator.dart';
 import 'package:parallax_rain/parallax_rain.dart';
 import 'package:sizer/sizer.dart';
 
@@ -119,7 +121,13 @@ class _Lifestyle_ScreenState extends State<Lifestyle_Screen> {
                   children: [
                     InkWell(
                       onTap: (){
-                        Navigator.pushReplacementNamed(context,'permisssion');
+                        Navigator.pushReplacement(context,PageRouteAnimator(
+                          child: Permission_screen(),
+                          routeAnimation: RouteAnimation.fadeAndRotate,
+                          curve: Curves.easeOut,
+                          duration:  Duration(milliseconds: 5000),
+                          reverseDuration:  Duration(milliseconds: 4000),
+                        ));
                       },
                       child: GlassmorphicContainer(
                           width: 45.w,
@@ -151,7 +159,13 @@ class _Lifestyle_ScreenState extends State<Lifestyle_Screen> {
                     ),
                     InkWell(
                       onTap: (){
-                        Navigator.pushReplacementNamed(context,'permisssion');
+                        Navigator.pushReplacement(context,PageRouteAnimator(
+                          child: Permission_screen(),
+                          routeAnimation: RouteAnimation.fadeAndRotate,
+                          curve: Curves.easeOut,
+                          duration:  Duration(milliseconds: 5000),
+                          reverseDuration:  Duration(milliseconds: 4000),
+                        ));
                       },
                       child: GlassmorphicContainer(
                           width: 45.w,

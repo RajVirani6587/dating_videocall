@@ -1,5 +1,7 @@
+import 'package:dating_videocall/view/lifestyle_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
+import 'package:page_route_animator/page_route_animator.dart';
 import 'package:parallax_rain/parallax_rain.dart';
 import 'package:sizer/sizer.dart';
 
@@ -115,7 +117,13 @@ class _Your_ScreenState extends State<Your_Screen> {
                 children: [
                   InkWell(
                     onTap: (){
-                      Navigator.pushReplacementNamed(context,'life');
+                      Navigator.pushReplacement(context,PageRouteAnimator(
+                        child: Lifestyle_Screen(),
+                        routeAnimation: RouteAnimation.leftToRightWithFade,
+                        curve: Curves.easeOut,
+                        duration:  Duration(milliseconds: 5000),
+                        reverseDuration:  Duration(milliseconds: 4000),
+                      ));
                     },
                     child: GlassmorphicContainer(
                         width: 45.w,
@@ -147,7 +155,13 @@ class _Your_ScreenState extends State<Your_Screen> {
                   ),
                   InkWell(
                     onTap: (){
-                      Navigator.pushReplacementNamed(context,'life');
+                      Navigator.pushReplacement(context,PageRouteAnimator(
+                        child: Lifestyle_Screen(),
+                        routeAnimation: RouteAnimation.leftToRightWithFade,
+                        curve: Curves.easeOut,
+                        duration:  Duration(milliseconds: 5000),
+                        reverseDuration:  Duration(milliseconds: 4000),
+                      ));
                     },
                     child: GlassmorphicContainer(
                         width: 45.w,

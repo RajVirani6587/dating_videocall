@@ -1,4 +1,6 @@
+import 'package:dating_videocall/view/bottom_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:page_route_animator/page_route_animator.dart';
 import 'package:parallax_rain/parallax_rain.dart';
 import 'package:sizer/sizer.dart';
 
@@ -43,7 +45,13 @@ class _Start_ScreenState extends State<Start_Screen> {
                   Text("Waiting for something special.",style: TextStyle(color: Colors.white,fontSize: 10.sp,letterSpacing: 2),),
                   SizedBox(height: 4.h,),
                   InkWell(onTap: (){
-                    Navigator.pushReplacementNamed(context,'bottom');
+                    Navigator.pushReplacement(context,PageRouteAnimator(
+                      child: Bottom_Screen(),
+                      routeAnimation: RouteAnimation.size,
+                      curve: Curves.easeOut,
+                      duration:  Duration(milliseconds: 3000),
+                      reverseDuration:  Duration(milliseconds: 2000),
+                    ));
                     showCustomDialog(context);
                   },child: Icon(Icons.arrow_forward,size:35.sp,color: Colors.white,)),
                 ],

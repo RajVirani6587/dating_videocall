@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dating_videocall/view/first_screen.dart';
+import 'package:dating_videocall/view/private_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
@@ -42,7 +43,7 @@ class _Splash_ScreenState extends State<Splash_Screen> {
                 Dialog();
               } else {
                 Navigator.pushReplacement(context,PageRouteAnimator(
-                  child:Open_Time_Screen(),
+                  child:PrivacyPolicy_Screen(),
                   routeAnimation: RouteAnimation.topToBottom,
                   curve: Curves.slowMiddle,
                   duration: const Duration(milliseconds: 4000),

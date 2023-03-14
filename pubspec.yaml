@@ -54,6 +54,8 @@ dependencies:
   like_button: ^2.0.5
   flicked_cards: ^0.0.3
   google_fonts: ^2.1.0
+  video_player: ^2.6.0
+  face_camera: ^0.0.6
 
 
 dev_dependencies:

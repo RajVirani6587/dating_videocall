@@ -1,10 +1,12 @@
 import 'dart:io';
 
 import 'package:dating_videocall/provider/top_provider.dart';
+import 'package:dating_videocall/view/contrary%20_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
+import 'package:page_route_animator/page_route_animator.dart';
 import 'package:parallax_rain/parallax_rain.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
@@ -226,7 +228,16 @@ class _Detail_ScreenState extends State<Detail_Screen> {
                                 home_providerf!.txtGender = txtgender.text;
                                 home_providerf!.txtNamee = txtname.text;
                                 home_providerf!.txtImage = f1.path;
-                                Navigator.pushReplacementNamed(context,'contrary');
+                                print(home_providerf!.txtAge);
+                                print(home_providerf!.txtGender);
+                                print(home_providerf!.txtNamee);
+                                Navigator.pushReplacement(context,PageRouteAnimator(
+                                  child: contrary_Screen(),
+                                  routeAnimation: RouteAnimation.bottomToTop,
+                                  curve: Curves.easeOut,
+                                  duration:  Duration(milliseconds: 5000),
+                                  reverseDuration:  Duration(milliseconds: 4000),
+                                ));
                               }
                               else{
                                 showDialog(

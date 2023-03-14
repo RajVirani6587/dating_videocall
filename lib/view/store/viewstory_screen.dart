@@ -1,7 +1,11 @@
 import 'package:dating_videocall/model/model3.dart';
 import 'package:dating_videocall/provider/top_provider.dart';
+import 'package:dating_videocall/view/bottom_screen.dart';
+import 'package:dating_videocall/view/store/Store_screen.dart';
+import 'package:dating_videocall/view/store/video_viewscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:like_button/like_button.dart';
+import 'package:page_route_animator/page_route_animator.dart';
 import 'package:parallax_rain/parallax_rain.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
@@ -66,7 +70,13 @@ class _ViewSyory_ScreenState extends State<ViewSyory_Screen> {
                                 stories:  home_providerf!.sampleUsers[index].stories,
                                 imageasset: home_providerf!.sampleUsers[index].imageasset,
                               );
-                              Navigator.pushNamed(context,'home');
+                              Navigator.push(context,PageRouteAnimator(
+                                child: StoryPage(),
+                                routeAnimation: RouteAnimation.sizeFromTop,
+                                curve: Curves.easeOut,
+                                duration:  Duration(milliseconds: 2500),
+                                reverseDuration:  Duration(milliseconds: 1500),
+                              ));
                             },
                             child: Container(
                               height:9.h,
@@ -119,7 +129,13 @@ class _ViewSyory_ScreenState extends State<ViewSyory_Screen> {
                             year: home_providerf!.l1[index].year,
                             video:home_providerf!.l1[index].video,
                           );
-                          Navigator.pushNamed(context,'');
+                          Navigator.push(context,PageRouteAnimator(
+                            child: Videoview_Screen(),
+                            routeAnimation: RouteAnimation.scale,
+                            curve: Curves.easeOut,
+                            duration:  Duration(milliseconds: 2500),
+                            reverseDuration:  Duration(milliseconds: 1500),
+                          ));
                         },
                         child: Stack(
                           children: [
@@ -128,7 +144,7 @@ class _ViewSyory_ScreenState extends State<ViewSyory_Screen> {
                               child: ClipRRect(borderRadius: BorderRadius.circular(10.sp),
                                 child: Image.asset("${home_providerf!.l1[index].Image}",
                                   fit: BoxFit.fill,
-                                  height:45.h,
+                                  height:50.h,
                                   width: 84.w,
                                 ),
                               ),
@@ -136,7 +152,7 @@ class _ViewSyory_ScreenState extends State<ViewSyory_Screen> {
                             Padding(
                               padding:  EdgeInsets.symmetric(horizontal:6.5.w),
                               child: Container(
-                                height: 45.h,
+                                height: 50.h,
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
@@ -153,82 +169,87 @@ class _ViewSyory_ScreenState extends State<ViewSyory_Screen> {
                                         ),
                                       ),
                                     ),
-                                    Align(
-                                      alignment: Alignment.centerRight,
-                                      child: Container(
-                                        height: 20.h,
-                                        width: 15.w,
-                                        decoration: BoxDecoration(
-                                          color: Colors.white54,
-                                          borderRadius: BorderRadius.only(topLeft: Radius.circular(10.sp),bottomLeft:Radius.circular(10.sp) ),
+                                    Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Padding(
+                                          padding:  EdgeInsets.only(left: 35.w),
+                                          child: Icon(Icons.play_circle_outline_sharp,color: Colors.white,size: 45.sp,),
                                         ),
-                                        child: Column(
-                                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                          children: [
-                                            LikeButton(
-                                              size: 40,
-                                              circleColor: CircleColor(
-                                                  start: Colors.pinkAccent,
-                                                  end: Colors.redAccent),
-                                              bubblesColor: BubblesColor(
-                                                dotPrimaryColor: Color(0xff33b5e5),
-                                                dotSecondaryColor: Color(0xff0099cc),
+                                        Container(
+                                          height: 20.h,
+                                          width: 15.w,
+                                          decoration: BoxDecoration(
+                                            color: Colors.white54,
+                                            borderRadius: BorderRadius.only(topLeft: Radius.circular(10.sp),bottomLeft:Radius.circular(10.sp) ),
+                                          ),
+                                          child: Column(
+                                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                            children: [
+                                              LikeButton(
+                                                size: 40,
+                                                circleColor: CircleColor(
+                                                    start: Colors.pinkAccent,
+                                                    end: Colors.redAccent),
+                                                bubblesColor: BubblesColor(
+                                                  dotPrimaryColor: Color(0xff33b5e5),
+                                                  dotSecondaryColor: Color(0xff0099cc),
+                                                ),
+                                                likeBuilder: (bool isLiked) {
+                                                  return Icon(
+                                                    isLiked
+                                                        ? Icons.favorite
+                                                        : Icons.favorite_border,
+                                                    color: isLiked
+                                                        ? Colors.red
+                                                        : Colors.black,
+                                                    size: 40,
+                                                  );
+                                                },
                                               ),
-                                              likeBuilder: (bool isLiked) {
-                                                return Icon(
-                                                  isLiked
-                                                      ? Icons.favorite
-                                                      : Icons.favorite_border,
-                                                  color: isLiked
-                                                      ? Colors.red
-                                                      : Colors.black,
-                                                  size: 40,
-                                                );
-                                              },
-                                            ),
-                                            LikeButton(
-                                              size: 40,
-                                              circleColor: CircleColor(
-                                                  start: Colors.blue.shade900,
-                                                  end: Colors.blue.shade700),
-                                              bubblesColor: BubblesColor(
-                                                dotPrimaryColor: Color(
-                                                    0xff5d8e9f),
-                                                dotSecondaryColor: Color(
-                                                    0xff73d0fd),
+                                              LikeButton(
+                                                size: 40,
+                                                circleColor: CircleColor(
+                                                    start: Colors.blue.shade900,
+                                                    end: Colors.blue.shade700),
+                                                bubblesColor: BubblesColor(
+                                                  dotPrimaryColor: Color(
+                                                      0xff5d8e9f),
+                                                  dotSecondaryColor: Color(
+                                                      0xff73d0fd),
+                                                ),
+                                                likeBuilder: (bool isLiked) {
+                                                  return Icon(
+                                                    isLiked
+                                                        ? Icons.thumb_up
+                                                        : Icons.thumb_up_off_alt_outlined,
+                                                    color: isLiked
+                                                        ? Colors.blue
+                                                        : Colors.black,
+                                                    size: 40,
+                                                  );
+                                                },
                                               ),
-                                              likeBuilder: (bool isLiked) {
-                                                return Icon(
-                                                  isLiked
-                                                      ? Icons.thumb_up
-                                                      : Icons.thumb_up_off_alt_outlined,
-                                                  color: isLiked
-                                                      ? Colors.blue
-                                                      : Colors.black,
-                                                  size: 40,
-                                                );
-                                              },
-                                            ),
-                                            PopupMenuButton(
-                                                initialValue: 3,
-                                                icon: Icon(Icons.more_horiz,color: Colors.black,size: 30.sp,),
-                                                itemBuilder: (context){
-                                                  return [
-                                                    PopupMenuItem(
-                                                        child: InkWell(onTap: (){
-                                                          reportdilaog();
-                                                        },
-                                                            child: Text("Report"))),
-                                                    PopupMenuItem(
-                                                        child: InkWell(onTap: (){
-                                                          Blockdialog();
-                                                        },child: Text("Block",))),
-                                                  ];
-                                                }
-                                            ),
-                                          ],
+                                              PopupMenuButton(
+                                                  initialValue: 3,
+                                                  icon: Icon(Icons.more_horiz,color: Colors.black,size: 30.sp,),
+                                                  itemBuilder: (context){
+                                                    return [
+                                                      PopupMenuItem(
+                                                          child: InkWell(onTap: (){
+                                                            reportdilaog();
+                                                          },
+                                                              child: Text("Report"))),
+                                                      PopupMenuItem(
+                                                          child: InkWell(onTap: (){
+                                                            Blockdialog();
+                                                          },child: Text("Block",))),
+                                                    ];
+                                                  }
+                                              ),
+                                            ],
+                                          ),
                                         ),
-                                      ),
+                                      ],
                                     ),
                                     Padding(
                                       padding: EdgeInsets.only(bottom: 1.h,left: 0.5.w),
@@ -362,7 +383,13 @@ class _ViewSyory_ScreenState extends State<ViewSyory_Screen> {
   }
 
   void back(){
-    Navigator.pushReplacementNamed(context, 'bottom');
+    Navigator.pushReplacement(context, PageRouteAnimator(
+      child: Bottom_Screen(),
+      routeAnimation: RouteAnimation.rightToLeft,
+      curve: Curves.easeOut,
+      duration:  Duration(milliseconds: 2500),
+      reverseDuration:  Duration(milliseconds: 1500),
+    ));
   }
 
 }
